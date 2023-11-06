@@ -1,4 +1,4 @@
-#!/bin/sh
+d#!/bin/sh
 
 # shellcheck disable=SC2034
 VERSION="v0.1.0"
