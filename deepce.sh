@@ -1149,8 +1149,8 @@ exploitSysModule(){
     exit 1
   fi
 
-  if ! [ -d "/lib/modules/$(kernelVersion)" ]; then
-    printError "Linux headers for $(kernelVersion) are required to run this exploit."
+  if ! [ -d "/lib/modules/$kernelVersion" ]; then
+    printError "Linux headers for $kernelVersion are required to run this exploit."
     exit 1
   fi
 
@@ -1199,9 +1199,9 @@ EOF
 cat << EOF > Makefile
 obj-m +=${module_name}.o
 all:
-	make -C /lib/modules/$(kernelVersion)/build M=$(pwd) modules
+	make -C /lib/modules/$kernelVersion/build M=$(pwd) modules
 clean:
-	make -C /lib/modules/$(kernelVersion)/build M=$(pwd) clean
+	make -C /lib/modules/$kernelVersion/build M=$(pwd) clean
 EOF
 
   printSuccess "Done"
