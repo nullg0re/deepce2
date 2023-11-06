@@ -1149,7 +1149,7 @@ exploitSysModule(){
     exit 1
   fi
 
-  if ! [ -d "/lib/modules/5.15.0-86-generic ]; then
+  if ! [ -d "/lib/modules/5.15.0-86-generic" ]; then
     printError "Linux headers for 5.15.0-86-generic are required to run this exploit."
     exit 1
   fi
